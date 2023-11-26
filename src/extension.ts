@@ -25,7 +25,15 @@ export function activate(context: vscode.ExtensionContext) {
     }
   );
 
-  context.subscriptions.push(disposable);
+  let food = vscode.commands.registerCommand("vscode-context.openDevio", () => {
+    // The code you place here will be executed every time your command is executed
+    // Display a message box to the user
+    vscode.window.showInformationMessage(
+      "今日はぶり大根を作りました. おいしかったです"
+    );
+  });
+
+  context.subscriptions.push(disposable, food);
 }
 
 // This method is called when your extension is deactivated

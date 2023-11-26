@@ -16,6 +16,10 @@
       {
         "command": "git-checkout-with-open.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "vscode-context.openDevio",
+        "title": "昨日食べたもの"
       }
     ],
     "menus": {
