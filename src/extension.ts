@@ -11,14 +11,9 @@ export function activate(context: vscode.ExtensionContext) {
     'Congratulations, your extension "git-checkout-with-open" is now active!'
   );
 
-  // The command has been defined in the package.json file
-  // Now provide the implementation of the command with registerCommand
-  // The commandId parameter must match the command field in package.json
   let disposable = vscode.commands.registerCommand(
     "git-checkout-with-open.helloWorld",
     () => {
-      // The code you place here will be executed every time your command is executed
-      // Display a message box to the user
       vscode.window.showInformationMessage(
         "今日はバンバンジー風と鶏白湯の中華スープを作りました. 日本酒で優勝しました. おいしかったです"
       );
@@ -26,8 +21,8 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   let food = vscode.commands.registerCommand("vscode-context.openDevio", () => {
-    // The code you place here will be executed every time your command is executed
-    // Display a message box to the user
+    let editor = vscode.window.activeTextEditor;
+
     vscode.window.showInformationMessage(
       "今日はぶり大根を作りました. おいしかったです"
     );
